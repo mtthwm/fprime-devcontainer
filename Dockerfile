@@ -22,5 +22,4 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && python3 -m venv /tmp/fprime-venv \
     && . /tmp/fprime-venv/bin/activate \
     && python3 -m pip install -U --upgrade pip setuptools setuptools_scm wheel \
-    && printf '\n[ -d "%s" ] && . %s/bin/activate\n' /tmp/fprime-venv /tmp/fprime-venv >> ~/.bashrc \
-    && echo 'eval "$(register-python-argcomplete fprime-cli)"' >> ~/.bashrc
+    && python3 -m pip install -U fprime-tools
